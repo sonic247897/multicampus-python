@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            /* 크기 단위 */
+            /* pixel: 화면의 가장 작은 단위(점) 
+                % : 백분위 단위
+                vw: viewport - 내 디바이스 화면을 기준으로 가로 길이 설정
+                vh: viewport - 내 디바이스 화면을 기준으로 세로 길이 설정
+
+                width: 50vw; // 내 화면의 가로길이의 50%
+                height: 30vh; // 내 화면의 세로길이의 30%
+            */
+            width: 100px; 
+            height: 100px; 
+            /* bgc 입력하면 자동완성 */
+            background-color: red;
+            /* border 속성: 두께, 스타일(선, 점선), 색 */
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1. margin, padding, border 속성(CSS=box model) -->
+    <!-- margin -->
+    <!-- emmet .box*4 -->
+    <div class="box" style="margin-bottom: 30px;"></div>
+    <div class="box" style="margin-left: 30px;"></div>
+    <div class="box" style="margin-right: 30px;"></div>
+    <div class="box" style="margin-top: 30px;"></div>
+    <hr>
+    <!-- padding: 박스 크기 자체도 패딩 준만큼 커진다! -->
+    <div class="box" style="padding-bottom: 30px;">바텀</div>
+    <div class="box" style="padding-left: 30px;">레프트</div>
+    <div class="box" style="padding-right: 30px;">라이트</div>
+    <div class="box" style="padding-top: 30px;">탑</div>
+    <hr>
+    <!-- 2. display 속성: block, inline, inline-block -->
+    <!-- block : div태그, p태그가 기본적으로 갖고 있는 속성. 화면을 꽉 채운다.
+        항상 새로운 줄에서 시작한다. -->
+        <!-- block 안에 inline이 들어갈 수 있다.-->
+    <p>나는 블락이야<span>나는 인라인이야</span></p>
+    <!-- inline: span태그가 기본적으로 갖고 있는 속성. 컨텐츠 내용만큼만 채운다.
+        (@중요: 높이, 너비 적용 안됨!!) -->
+    <span style="width: 1000px; height: 1000px;">나는 인라인이야</span><span>나는 인라인이야</span>
+    <span style="display:inline-block; width: 100px; height: 100px;">나는 인라인 블락</span>
+    <span style="display: none;">안보이는 게 아니라 아예 사라짐!</span>
+    <hr>
+    <!-- 3. visibility 속성: visible, hidden -->
+    <div class="box"></div>
+    <div class="box" style="display: none;">자기 공간도 없음</div>
+    <div class="box" style="visibility: hidden;">안 보이는데 공간은 차지</div>
+    <!-- opacity(불투명성): 디폴트값: 1인데 0으로 두면 투명해져서 안보인다. -->
+    <div calss="box" style="opacity: 0;"></div>
+    <div class="box"></div>
+
+    <marquee direction="right">@/'</marquee>
+    <marquee direction="right">@/'</marquee>
+    <marquee direction="right">@/'</marquee>
+    
+</body>
+</html>

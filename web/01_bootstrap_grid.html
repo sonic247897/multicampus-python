@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+<body>
+  <!-- bootstrap: 컨테이너 div 만들고 시작! -->
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col" style="background-color: red;"></div> 
+          부트스트랩 사용할 때는 style 말고 class를 사용한다.
+      -->
+      <!-- 4칸씩 할당된다. 12칸을 셋이서 나눠먹음 -->
+      <div class="col bg-danger border">그리드 시스템</div>
+      <div class="col bg-danger border">그리드 시스템</div>
+      <div class="col bg-danger border">그리드 시스템</div>
+    </div>
+    <div class="row">
+      <!-- 6칸씩 할당 -->
+      <div class="col bg-danger border">그리드 시스템</div>
+      <div class="col bg-danger border">그리드 시스템</div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-3 bg-primary border">그리드 시스템</div>
+      <div class="col-6 bg-success border">그리드 시스템</div>
+      <div class="col-3 bg-warning border">그리드 시스템</div>
+    </div>
+    <hr>
+    <!-- 빈칸: offset -->
+    <div class="row">
+      <div class="col-3 bg-primary border">그리드 시스템</div>
+      <!-- 앞에 빈공간 하나 생김 -->
+      <div class="col-3 offset-3 bg-primary border">그리드 시스템</div>
+      <div class="col-3 bg-primary border">그리드 시스템</div>
+    </div>
+    <hr>
+    <!-- row: justify-content (남은 공간을 알아서 정렬) -->
+    <!-- 가운데로 몰고 좌우 여백 -->
+    <div class="row justify-content-center">
+      <div class="col-3 bg-danger">그리드 시스템</div>
+      <div class="col-3 bg-danger">그리드 시스템</div>
+      <div class="col-3 bg-danger">그리드 시스템</div>
+    </div>
+    <!-- col 사이에 공백 동일하게 주기 -->
+    <div class="row justify-content-between">
+      <div class="col-3 bg-danger">그리드 시스템</div>
+      <div class="col-3 bg-danger">그리드 시스템</div>
+      <div class="col-3 bg-danger">그리드 시스템</div>
+    </div>
+    <!-- col마다 좌우공백 -->
+    <div class="row justify-content-around">
+      <div class="col-3 bg-danger">그리드 시스템</div>
+      <div class="col-3 bg-danger">그리드 시스템</div>
+      <div class="col-3 bg-danger">그리드 시스템</div>
+    </div>
+    <hr>
+    <!-- 끝으로 몰아넣기(앞에 빈공간) -->
+    <div class="row justify-content-end">
+      <div class="col-3 bg-danger">그리드 시스템</div>
+      <div class="col-3 bg-danger">그리드 시스템</div>
+      <div class="col-3 bg-danger">그리드 시스템</div>
+    </div>
+    <hr>
+    <!-- 수직 정렬 -->
+    <!-- 나 자신을 정렬(align-self): row의 크기(높이)가 있어야 row를 기준으로 
+      시작, 중간, 끝 지점이 지정된다. -->
+    <div class="row" style="height: 100px;">
+      <div class="col align-self-start bg-secondary">그리드 시스템</div>
+      <div class="col align-self-center bg-secondary">그리드 시스템</div>
+      <div class="col align-self-end bg-secondary">그리드 시스템</div>
+    </div>
+    <hr>
+    <!-- 반응형 웹 구현 -->
+    <!-- 브라우저 창의 크기가 줄어들 때: sm이 되면 한 줄 차지하고, md가 되면 6칸씩, lg일 때는 3칸 씩 차지-->
+    <div class="row">
+      <div class="col col-sm-12 col-md-6 col-lg-3 bg-dark text-light">그리드 시스템</div>
+      <div class="col col-sm-12 col-md-6 col-lg-3 bg-dark text-light">그리드 시스템</div>
+      <div class="col col-sm-12 col-md-6 col-lg-3 bg-dark text-light">그리드 시스템</div>
+    </div>
+
+
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
