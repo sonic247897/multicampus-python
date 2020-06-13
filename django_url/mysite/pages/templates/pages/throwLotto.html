@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}
+  로또 구매 페이지
+{% endblock %}
+{% block body %}
+
+<h1>로또 구매 페이지</h1>
+<form action="{% url 'catchLotto' %}" method="GET">
+  <!-- 라벨 태그: 포커스 해주는 태그. 2줄 쌍으로 동작한다. -->
+  <label for="buy">수량: </label>
+  <input type="number" name="count" id="buy">
+  <input type="submit" value="제출" >
+</form>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}
+  던진다
+{% endblock %}
+{% block body %}
+<h1>던진다.</h1>
+<!-- 절대경로: C드라이버부터 시작하는 경로(깨질 수 있다)
+    상대경로: 루트 주소(ex. http://127.0.0.1:8000/catch)기준으로부터 
+    작성한 경로를 찾아가므로 깨지지 않음 -->
+<!-- url이 변경될 수 있으므로 경로를 통해 무언가 요청할 일이 있으면 이름(url '이름')으로 요청한다! 
+    이름은 각 앱의 urls.py에서 정의한다. -->
+<form action="{% url 'catch' %}" method="GET">
+  이름 : <input type="text" name="name">
+  나이 : <input type="number" name="age">
+  <input type="submit" value="제출"> <!-- 제출 버튼은 똑같이 input태그인데 type만 submit임 -->
+</form>
+{% endblock %}

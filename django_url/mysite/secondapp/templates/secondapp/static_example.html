@@ -1,0 +1,10 @@
+{% extends 'base.html' %} <!-- 템플릿 상속: 최상단 -->
+{% load static %} <!-- static파일 로드 -->
+{% block body %}
+  <!-- alt: 이미지 설명, 검색엔진 노출, 시각장애인에게 내용 읽어줌 -->
+  <!-- static 명령어: 원래는 로컬 주소에 있어야 할 파일을 http://127.0.0.1:8000/static/~ 으로 만들어 주는 역할을 함 
+      => 다른 사람들이 볼 수 있게 된다. -->
+  <img src="{% static 'secondapp/images/husky.png' %}" alt="시베리안 허스키">
+
+{% endblock %}
+

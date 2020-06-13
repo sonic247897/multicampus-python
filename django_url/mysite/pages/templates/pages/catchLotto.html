@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}
+  로또 구매
+{% endblock %}
+{% block body %}
+
+<h1>로또 번호는</h1>
+<p>로또를 {{ count }}장 구매하셨습니다.</p>
+<ul>
+  {% for data in lottoList %}
+    <li>{{ data }}</li>
+  {% endfor %}
+</ul>
+
+{% endblock %}
