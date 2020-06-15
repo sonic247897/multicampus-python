@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block body %}
+<h1>글 작성 페이지</h1>
+<hr>
+  <!-- <form action="/articles/create/"> -->
+  <form action="{% url 'articles:create' %}" method="GET">  
+    <!-- 이런 형식으로 작성하면 '제목'이 그냥 text가 아니라 input태그의 라벨이 된다.
+        => '제목'을 클릭했을 때 포커싱이 input태그 전체로 맞춰진다. -->
+    <label for="name">제목 : </label>
+    <input type="text" id="name" name="title">
+
+    <label for="cnt">내용 : </label>
+    <input type="text" id="cnt" name="content">
+
+    <input type="submit" value="글 작성">
+  </form>
+{% endblock %}
