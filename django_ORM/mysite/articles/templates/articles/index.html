@@ -2,10 +2,19 @@
 {% block body %}
   <h1>게시판</h1>
   <hr>
+  {% for article in articles %}
+    <h3>{{ article.pk }}번 째 글</h3>
+    <h4>제목 : {{ article.title }}</h4>
+    <a href="{% url 'articles:detail' article.pk %}">[DETAIL]</a>
+    <!-- <a href="/articles/{{ article.pk }}/"></a> -->
+    <hr>
+  {% endfor %}
   <a href="{% url 'articles:new' %}">NEW</a>
+  <hr>
 
   <h1>자기소개</h1>
   <hr>
   <!-- 변수 불러오는 것과 같음 -->
   <a href="{% url 'articles:introduce' %}">GO</a>
+  <hr>
 {% endblock %}
